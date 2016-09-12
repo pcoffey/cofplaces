@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912062003) do
+ActiveRecord::Schema.define(version: 20160912064001) do
 
   create_table "places", force: :cascade do |t|
     t.string   "name"
@@ -19,10 +19,11 @@ ActiveRecord::Schema.define(version: 20160912062003) do
     t.string   "phone"
     t.string   "website"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.float    "latitude"
     t.float    "longitude"
+    t.integer  "total_average", default: 0
   end
 
   create_table "reviews", force: :cascade do |t|
