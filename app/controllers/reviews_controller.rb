@@ -47,6 +47,6 @@ class ReviewsController <ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:content, :place_id )
+      params.require(:review).permit(:content, :place_id, :score )
     end
 end
