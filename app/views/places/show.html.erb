@@ -32,15 +32,15 @@
 
   var map;
   var myCenter = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
-  
+
   function initMap() {
     map = new google.maps.Map(document.getElementById('map-canvas'), {
       center: myCenter,
-      zoom: 15
+      zoom: 13
     });
     var marker = new google.maps.Marker({
-      position: myCenter,
-      map: map,
+      position: myCenter, 
+      map: map, 
     });
   }
   
