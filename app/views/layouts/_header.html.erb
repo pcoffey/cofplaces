@@ -18,12 +18,14 @@
         
         
       </ul>
-      <form class="navbar-form navbar-left" role="search">
+      <%= form_tag places_path, method: :get, class: 'navbar-form navbar-left' do %>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+         
+          <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Type a Name or a Place" %>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+        
+        <%= submit_tag "Search", name: nil, class: 'btn btn-default' %>
+        <% end %>
       <ul class="nav navbar-nav navbar-right">
         
         <% if current_user %>
